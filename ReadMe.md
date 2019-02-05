@@ -1,12 +1,11 @@
 ## Talk on &ldquo;Collaborating Reproducibly&rdquo;
 
 These are slides for a talk that I will give at the AAAS meeting in
-Washington, DC, on 17 Feb, 2019.
+Washington, DC, on 17 Feb 2019.
 
 
 The compiled slides:
-[pdf](https://www.biostat.wisc.edu/~kbroman/presentations/rrcollab.pdf) |
-[pdf with notes](https://www.biostat.wisc.edu/~kbroman/presentations/rrcollab_withnotes.pdf)
+[`rrcollab.pdf`](https://www.biostat.wisc.edu/~kbroman/presentations/rrcollab.pdf)
 
 ---
 
