@@ -5,7 +5,7 @@ Washington, DC, on 17 Feb 2019.
 
 
 The compiled slides:
-[`rrcollab.pdf`](https://www.biostat.wisc.edu/~kbroman/presentations/rrcollab.pdf)
+[`rrcollab.pdf`](https://www.biostat.wisc.edu/~kbroman/presentations/rrcollab_aaas2019.pdf)
 
 ---
 
