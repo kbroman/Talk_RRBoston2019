@@ -47,6 +47,7 @@ group_col_all <- group_col[as.numeric(peaks$pheno_type)]
 plot_lodpeaks(peaks, map, ylim=c(5.5, 10.25), bg=group_col_all, xlab="",
               main="Inferred QTL", ylab="", cex=0.7)
 title(xlab="Chromosome", ylab="LOD score", mgp=c(1.8, 0.3, 0))
+box()
 dev.off()
 
 pdf("../Figs/attiedo_results.pdf", height=5.5, width=9.5, pointsize=13)
