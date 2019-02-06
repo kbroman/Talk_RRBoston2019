@@ -1,10 +1,10 @@
 STEM = rrcollab
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 
-$(STEM).pdf: $(STEM).tex header.tex Figs/hs.pdf
+$(STEM).pdf: $(STEM).tex header.tex Figs/hs.pdf Figs/attiedo_results.pdf
 	xelatex $<
 
-Figs/hs.pdf: R/hs_fig.R
+Figs/%.pdf: R/%_fig.R
 	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
 
 all: $(STEM).pdf web
