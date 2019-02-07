@@ -255,9 +255,7 @@ but you don't reply to emails.
 
 
 
-\begin{frame}<handout:0>[fragile,c]{Organize your project}
-
-\only<1>{\addtocounter{framenumber}{-1}}
+\begin{frame}[fragile,c]{Organize your project}
 
 \begin{center}
 \begin{minipage}[c]{10.3cm}
@@ -276,6 +274,34 @@ Ruby/                 Makefile
 \end{center}
 
 \end{frame}
+
+
+\begin{frame}<handout:0>[fragile,c]{Organize your project}
+
+\addtocounter{framenumber}{-1}
+
+\begin{center}
+\begin{minipage}[c]{10.3cm}
+\begin{semiverbatim}
+\lstset{basicstyle=\normalsize}
+\begin{lstlisting}[linewidth=10.3cm]
+0_vcf2db.R
+1_prep_geno.R
+2_prep_pheno_clin.R
+2_prep_pheno_otu.R
+3_prep_covar.R
+4_prep_analysis_pheno_clin.R
+4_prep_analysis_pheno_otu.R
+5_scans.R
+6_grab_peaks.R
+7_find_nearby_peaks.R
+\end{lstlisting}
+\end{semiverbatim}
+\end{minipage}
+\end{center}
+
+\end{frame}
+
 
 
 \begin{frame}<handout:0>[fragile,c]{Chaos}
