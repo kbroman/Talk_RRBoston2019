@@ -25,6 +25,13 @@ ifile.readlines.each do |z|
     do_2nd_sub = false
   end
 
+  # replace figures with black/white version, if available (same name but with _bw)
+  if /Figs\/(.+)\.([a-z]+)\}/ =~ z
+      if File.exists?("Figs/#{$1}_bw.#{$2}")
+          z = z.sub(/Figs\/(.+)\.([a-z]+)/, "Figs/#{$1}_bw.#{$2}")
+      end
+  end
+
   ofile.write("\\def\\notescolors{1}\n") if /^\\input{/ =~ z # add line saying to use notes colors
 
   ofile.write(z)
