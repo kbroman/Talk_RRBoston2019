@@ -32,41 +32,52 @@ if(file.exists(file)) {
     save(out, map, peaks, file=file)
 }
 
-bgcolor <- broman::brocolors("bg")
+for(bw in c(FALSE, TRUE)) {
 
-pdf("../Figs/attiedo_results_nolegend.pdf", height=5.5, width=9.5, pointsize=13)
-par(bg=bgcolor, fg="white", col="white", col.axis="white", col.lab="white",
-    col.main="lightblue")
-par(mfrow=c(2,1), mar=c(3.1, 3.1, 1.8, 0.6))
+    bgcolor <- ifelse(bw, "white", broman::brocolors("bg"))
 
-plot(out, map, main="Weight change (week 11 vs 1)",
-     altcol="green3", ylim=c(0, 10.25), mgp=c(1.8, 0.3, 0))
+    if(!bw) { # do this one only in color
+        pdf("../Figs/attiedo_results_nolegend.pdf", height=5.5, width=9.5, pointsize=13)
+        par(bg=bgcolor, fg="white", col="white", col.axis="white", col.lab="white",
+            col.main="lightblue")
+        par(mfrow=c(2,1), mar=c(3.1, 3.1, 1.8, 0.6))
 
-group_col <- brocolors("web")[c("silver", "green", "orange", "purple")]
-group_col_all <- group_col[as.numeric(peaks$pheno_type)]
-plot_lodpeaks(peaks, map, ylim=c(5.5, 10.25), bg=group_col_all, xlab="",
-              main="Inferred QTL", ylab="", cex=0.7)
-title(xlab="Chromosome", ylab="LOD score", mgp=c(1.8, 0.3, 0))
-box()
-dev.off()
+        plot(out, map, main="Weight change (week 11 vs 1)",
+             altcol="green3", ylim=c(0, 10.25), mgp=c(1.8, 0.3, 0))
 
-pdf("../Figs/attiedo_results.pdf", height=5.5, width=9.5, pointsize=13)
-par(bg=bgcolor, fg="white", col="white", col.axis="white", col.lab="white",
-    col.main="lightblue")
-par(mfrow=c(2,1), mar=c(3.1, 3.1, 1.8, 0.6))
+        group_col <- brocolors("web")[c("silver", "green", "orange", "purple")]
+        group_col_all <- group_col[as.numeric(peaks$pheno_type)]
+        plot_lodpeaks(peaks, map, ylim=c(5.5, 10.25), bg=group_col_all, xlab="",
+                      main="Inferred QTL", ylab="", cex=0.7)
+        title(xlab="Chromosome", ylab="LOD score", mgp=c(1.8, 0.3, 0))
+        box()
+        dev.off()
+    }
 
-levels(peaks$pheno_type) <- sub("ex vivo ", "", levels(peaks$pheno_type))
 
-plot(out, map, main="Weight change (week 11 vs 1)",
-     altcol="green3", ylim=c(0, 10.25), mgp=c(1.8, 0.3, 0))
+    file <- paste0("../Figs/attiedo_results",
+                   ifelse(bw, "_bw", ""),
+                   ".pdf")
+    pdf(file, height=5.5, width=9.5, pointsize=13)
+    if(!bw) {
+        par(fg="white", col="white", col.axis="white", col.lab="white",
+            col.main="lightblue")
+    }
+    par(mfrow=c(2,1), mar=c(3.1, 3.1, 1.8, 0.6), bg=bgcolor)
 
-group_col <- brocolors("web")[c("silver", "green", "orange", "purple")]
-group_col_all <- group_col[as.numeric(peaks$pheno_type)]
-plot_lodpeaks(peaks, map, ylim=c(5.5, 10.25), bg=group_col_all, xlab="",
-              main="Inferred QTL", ylab="", cex=0.7)
-title(xlab="Chromosome", ylab="LOD score", mgp=c(1.8, 0.3, 0))
-legend("topleft", bg="gray90", box.col="black",
-       pch=21, pt.bg=group_col, text.col="black", col="black",
-       levels(peaks$pheno_type), ncol=2, cex=0.85)
-box()
-dev.off()
+    levels(peaks$pheno_type) <- sub("ex vivo ", "", levels(peaks$pheno_type))
+
+    plot(out, map, main="Weight change (week 11 vs 1)",
+         altcol="green3", ylim=c(0, 10.25), mgp=c(1.8, 0.3, 0))
+
+    group_col <- brocolors("web")[c("silver", "green", "orange", "purple")]
+    group_col_all <- group_col[as.numeric(peaks$pheno_type)]
+    plot_lodpeaks(peaks, map, ylim=c(5.5, 10.25), bg=group_col_all, xlab="",
+                  main="Inferred QTL", ylab="", cex=0.7)
+    title(xlab="Chromosome", ylab="LOD score", mgp=c(1.8, 0.3, 0))
+    legend("topleft", bg="gray90", box.col="black",
+           pch=21, pt.bg=group_col, text.col="black", col="black",
+           levels(peaks$pheno_type), ncol=2, cex=0.85)
+    box()
+    dev.off()
+}
