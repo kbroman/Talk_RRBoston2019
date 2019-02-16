@@ -20,5 +20,7 @@ $(STEM)_withnotes.pdf: $(STEM)_withnotes.tex header.tex
 
 
 web: $(STEM).pdf
-	scp $(STEM).pdf adhara.biostat.wisc.edu:Website/presentations/
-	scp $(STEM).pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM)_aaas2019.pdf
+	scp $(STEM)_withnotes.pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM).pdf
+	scp $(STEM)_withnotes.pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM)_aaas2019.pdf
+	scp $(STEM).pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM)_nonotes.pdf
+	scp $(STEM).pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM)_aaas2019_nonotes.pdf
