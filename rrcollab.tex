@@ -236,8 +236,20 @@ Reproducible
 
 \note{The above are my thoughts on the basic steps to take towards
   full reproducibility.
+  But don't try to change every aspect of your workflow all at once.
 
-  Don't try to change every aspect of your workflow all at once.
+  Organize your data and code, segregated into a single directory with
+  clearly named files and subdirectories. Everything you do with the
+  data is done with a script. Automate the full analysis process. (I
+  use GNU Make.) Even better than scripts are reproducible reports,
+  where you can capture your motivation. Then turn to improving the
+  quality of your code, first by writing functions and then by
+  packaging those functions with documentation. Version control is not
+  strictly necessary for reproducibility, but it will change your life
+  and is especially useful for collaborative projects. Finally,
+  license your software so that others may use it.
+
+  I'll say just a bit about some of these steps.
 }
 \end{frame}
 
@@ -254,7 +266,7 @@ are powerful weapons against chaos.
 Your closest collaborator is you six months ago, \\
 but you don't reply to emails.
 }
-\only<3>{Have sympathy for your future self.}
+\only<3|handout:0>{Have sympathy for your future self.}
 \end{center}
 
 \hfill
@@ -266,15 +278,7 @@ but you don't reply to emails.
 
 \note{The first thing to do is to make your project
   understandable to others (or yourself, later, when you try to figure
-  out what it was that you did.
-
-  Segregate all the materials for a project in one directory/folder on
-  your harddrive.
-
-  I prefer to separate raw data from processed data, and I put code in
-  a separate directory.
-
-  Write {\tt ReadMe} files to explain what's what.
+  out what it was that you did).
 }
 \end{frame}
 
@@ -299,10 +303,16 @@ Ruby/                 Makefile
 \end{center}
 
 \note{
-    This is the way I organize a project directory. The key principles
-    are to put everything related to a project in a common directory,
-    but then to separate data from code and separate raw data from
-    processed data.
+  Segregate all the materials for a project in one directory/folder on
+  your harddrive.
+
+  This is the way I organize a project directory. The key principles
+  are to put everything related to a project in a common directory,
+  but then to separate data from code and separate raw data from
+  processed data.
+
+  Write {\tt ReadMe} files to explain what's what. Make sure they stay
+  current.
 }
 
 \end{frame}
@@ -411,7 +421,7 @@ Data4Tram/        PepIns_2012-02-09/
   With these informal reports, I seek to fully capture the entirety of
   my data explorations and decisions.
 
-  Python people should look at iPython notebooks.
+  Python people should look at Jupyter notebooks.
 }
 \end{frame}
 
@@ -435,7 +445,11 @@ Data4Tram/        PepIns_2012-02-09/
 
 
 \note{
-    Back to my summary again.
+  Back to my summary. Again, don't try to change everything at once.
+
+  Reproducibility can be surprisingly hard and requires a daily
+  commitment. And here I'm just thinking about a project with a single
+  data analyst. A collaboration with multiple analysts is yet harder.
 }
 \end{frame}
 
@@ -459,6 +473,15 @@ Data4Tram/        PepIns_2012-02-09/
   \note{
     Collaboration has a lot of advantages, including for
     reproducibility efforts.
+
+    It can be useful to have a pair of people regularly review each
+    other's code, but it can be hard to get your busy friends to pay
+    attention to your little project. But if you are working together
+    on a project, you can more naturally build in some code review.
+
+    Moreover, you can explicitly test the reproducibility of your
+    analyses, by having your collaborator rerun your work, and vice
+    versa.
   }
 
 \end{frame}
@@ -481,7 +504,21 @@ Data4Tram/        PepIns_2012-02-09/
 
   \note{
     Collaboration also has challenges.
-  }
+
+    Do you have a shared vision for the reproducibility of the
+    project? You'll no doubt need to make some compromises about how
+    things are done: you can't both just do things the way you've
+    always done them. Careful coordination and regular communication
+    are key.
+
+    And then there are the technical challenges of how to share the
+    code and data and make sure your two working projects remain in
+    sync.
+
+    In a sense, the reproducibility of a collaborative project is
+    dependent on the weakest link. If one collaborator refuses to
+    fully participate and share their work, the chain is broken.
+}
 
 \end{frame}
 
