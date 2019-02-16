@@ -19,7 +19,7 @@ $(STEM)_withnotes.pdf: $(STEM)_withnotes.tex header.tex
 	mv $(STEM)_withnotes-nup.pdf $(STEM)_withnotes.pdf
 
 
-web: $(STEM).pdf
+web: $(STEM).pdf notes
 	scp $(STEM)_withnotes.pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM).pdf
 	scp $(STEM)_withnotes.pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM)_aaas2019.pdf
 	scp $(STEM).pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM)_nonotes.pdf
