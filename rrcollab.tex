@@ -886,9 +886,12 @@ Data4Tram/        PepIns_2012-02-09/
   \bi
 \item github / bitbucket
   \ei
-\item Pipeline / workflows
+\item Pipeline / workflow
   \bi
 \item make / drake / snakemake / rake
+  \ei
+\item Full environment
+  \bi
 \item docker containers
 \item \href{https://mybinder.org}{\tt mybinder.org} /
   \href{https://wholetale.org}{\tt wholetale.org}
@@ -896,6 +899,24 @@ Data4Tram/        PepIns_2012-02-09/
   \ei
 
 \note{
+  I must admit to not being totally confident about what advice to
+  give, regarding the tools to use for sharing data and code among
+  collaborators.
+
+  For sharing data, simple options include posting large files on a
+  data repository like figshare, or using cloud drive like dropbox,
+  box, or google drive.
+
+  For sharing code, I prefer to use a version control system like git,
+  with github, bitbucket, or a locally-managed equivalent.
+
+  For sharing the analysis pipeline or workflow, one can
+  incorporate a system like make (or drake, snakemake, or rake) with
+  the code.
+
+  The full software environment could be replicated across teams using
+  docker containers. Binder and Whole Tale are two systems for making
+  this easier.
 }
 
 \end{frame}
