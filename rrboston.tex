@@ -219,38 +219,18 @@ Reproducible
 
 
 
-\begin{frame}[c]{\href{https://kbroman.org/steps2rr}{\tt \color{title}
+\begin{frame}[c]{}
+
+   \centerline{\Large \href{https://kbroman.org/steps2rr}{\tt \color{title}
       kbroman.org/steps2rr}}
 
-  \begin{enumerate}
-  \itemsep10pt
-  \item Organize your data \& code
-  \item Everything with a script
-  \item Automate the process {\lolit (GNU Make)}
-  \item Turn scripts into reproducible reports
-  \item Turn repeated code into functions
-  \item Create a package/module
-  \item Use version control {\lolit (git/GitHub)}
-  \item License your software
-  \end{enumerate}
+\note{It was a long, hard process for me to move from my old standard
+  practice to a fully reproducible workflow. In thinking through that
+  process, I wrote down my thoughts on the basic steps to take towards
+  full reproducibility. This was aimed really at programmers, but it
+  forms the basis of what I'll present here.
 
-
-\note{The above are my thoughts on the basic steps to take towards
-  full reproducibility.
   But don't try to change every aspect of your workflow all at once.
-
-  Organize your data and code, segregated into a single directory with
-  clearly named files and subdirectories. Everything you do with the
-  data is done with a script. Automate the full analysis process. (I
-  use GNU Make.) Even better than scripts are reproducible reports,
-  where you can capture your motivation. Then turn to improving the
-  quality of your code, first by writing functions and then by
-  packaging those functions with documentation. Version control is not
-  strictly necessary for reproducibility, but it will change your life
-  and is especially useful for collaborative projects. Finally,
-  license your software so that others may use it.
-
-  I'll say just a bit about some of these steps.
 }
 \end{frame}
 
@@ -298,6 +278,9 @@ DerivedData/          Refs/
 Python/               ReadMe.txt
 R/                    ToDo.txt
 Ruby/                 Makefile
+
+Analysis/
+Figures/
 \end{lstlisting}
 \end{semiverbatim}
 \end{minipage}
@@ -306,6 +289,8 @@ Ruby/                 Makefile
 \note{
   Segregate all the materials for a project in one directory/folder on
   your hard drive.
+
+  There will be a lot of files. Organize them in a meaningful way.
 
   This is the way I organize a project directory. The key principles
   are to put everything related to a project in a common directory,
@@ -319,37 +304,9 @@ Ruby/                 Makefile
 \end{frame}
 
 
-\begin{frame}<handout:0>[fragile,c]{Organize your project}
-
-\addtocounter{framenumber}{-1}
-
-\begin{center}
-\begin{minipage}[c]{10.3cm}
-\begin{semiverbatim}
-\lstset{basicstyle=\normalsize}
-\begin{lstlisting}[linewidth=10.3cm]
-0_vcf2db.R
-1_prep_geno.R
-2_prep_pheno_clin.R
-2_prep_pheno_otu.R
-3_prep_covar.R
-4_prep_analysis_pheno_clin.R
-4_prep_analysis_pheno_otu.R
-5_scans.R
-6_grab_peaks.R
-7_find_nearby_peaks.R
-\end{lstlisting}
-\end{semiverbatim}
-\end{minipage}
-\end{center}
-
-\end{frame}
-
 
 
 \begin{frame}<handout:0>[fragile,c]{Chaos}
-
-\addtocounter{framenumber}{-1}
 
 \begin{center}
 \begin{minipage}[c]{11.33cm}
@@ -376,9 +333,40 @@ Data4Tram/        PepIns_2012-02-09/
 \end{minipage}
 \end{center}
 
+\note{
+  This is a folder on my hard drive, for the project that led me to
+  reassess my life.
+}
+
 \end{frame}
 
 
+
+\begin{frame}<handout:0>[fragile,c]{Choose good names for things}
+
+\begin{center}
+\begin{minipage}[c]{10.3cm}
+\begin{semiverbatim}
+\lstset{basicstyle=\normalsize}
+\begin{lstlisting}[linewidth=10.3cm]
+0_vcf2db.R
+1_prep_geno.R
+2_prep_pheno_clin.R
+2_prep_pheno_otu.R
+3_prep_covar.R
+4_prep_analysis_pheno_clin.R
+4_prep_analysis_pheno_otu.R
+5_scans.R
+6_grab_peaks.R
+7_find_nearby_peaks.R
+\end{lstlisting}
+\end{semiverbatim}
+\end{minipage}
+\end{center}
+
+\note{}
+
+\end{frame}
 
 
 \begin{frame}[c]{No ``{\hilit final}'' in file names}
