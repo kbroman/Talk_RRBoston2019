@@ -306,7 +306,7 @@ Figures/
 
 
 
-\begin{frame}<handout:0>[fragile,c]{Chaos}
+\begin{frame}[fragile,c]{Chaos}
 
 \begin{center}
 \begin{minipage}[c]{11.33cm}
@@ -341,8 +341,96 @@ Data4Tram/        PepIns_2012-02-09/
 \end{frame}
 
 
+\begin{frame}[fragile,c]{Choose good names for things}
 
-\begin{frame}<handout:0>[fragile,c]{Choose good names for things}
+\begin{center}
+\begin{minipage}[c]{13.7cm}
+\begin{semiverbatim}
+\lstset{basicstyle=\scriptsize}
+\begin{lstlisting}[linewidth=13.7cm]
+betw_tissue_corr.R     expr_scatterplot_allprobes.R  gve_similarity_alltissues.R
+coatcolor_lod.R        expr_scatterplots_dup.R       gve_similarity.R
+colors.R               expr_scatterplots_mix.R       gve_supp.R
+cover_fig.R            expr_scatterplots_swap.R      insulin_lod.R
+eqtl_counts_10.R       expr_swaps.R                  local_eqtl_locations.R
+eqtl_counts.R          func.R                        my_plot_map.R
+eve_hist.R             genotype_plates.R             my_plot_scanone.R
+eve_scheme.R           gve_hist.R                    sex_vs_X.R
+eve_similarity.R       gve_new.R                     xchr_fig.R
+eve_similarity_supp.R  gve.R                         xist_and_y.R
+expr_corr_dup.R        gve_scheme.R
+expr_corr_mix.R        gve_similarity_2ndbest.R
+\end{lstlisting}
+\end{semiverbatim}
+\end{minipage}
+\end{center}
+
+\note{}
+
+\end{frame}
+
+
+\begin{frame}[fragile,c]{Choose good names for things}
+
+\begin{center}
+\begin{minipage}[c]{10.3cm}
+\begin{semiverbatim}
+\lstset{basicstyle=\normalsize}
+\begin{lstlisting}[linewidth=10.3cm]
+fig1.png        fig5.png
+fig10.png       fig6.png
+fig2.png        fig7.png
+fig3.png        fig8.png
+fig4.png        fig9.png
+\end{lstlisting}
+\end{semiverbatim}
+\end{minipage}
+\end{center}
+
+\note{}
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}[c]{Choose good names for things}
+
+  \begin{itemize}
+  \item Machine readable
+    \begin{itemize}
+    \item No spaces
+    \item No special characters except {\textunderscore} and
+      {\tt -}
+    \end{itemize}
+
+  \item Human readable
+    \begin{itemize}
+    \item Explain the contents
+    \end{itemize}
+
+  \item Consistent
+    \begin{itemize}
+      \item Name similar files in a similar way
+    \end{itemize}
+
+  \item Make use of computer's sorting
+    \begin{itemize}
+      \item pad numbers with 0's (e.g., {\tt 01}, {\tt 02}, ...)
+      \item start with general grouping, then more specific
+      \item dates like {\tt 2019-05-14}
+    \end{itemize}
+
+  \end{itemize}
+
+\note{}
+
+\end{frame}
+
+
+\begin{frame}[fragile,c]{Choose good names for things}
 
 \begin{center}
 \begin{minipage}[c]{10.3cm}
@@ -369,6 +457,7 @@ Data4Tram/        PepIns_2012-02-09/
 \end{frame}
 
 
+
 \begin{frame}[c]{No ``{\hilit final}'' in file names}
 
 \vspace*{3mm}
@@ -385,6 +474,91 @@ Data4Tram/        PepIns_2012-02-09/
 \end{frame}
 
 
+
+\begin{frame}<handout:0>[fragile,c]{No ``{\hilit final}'' in file names}
+
+
+\addtocounter{framenumber}{-1}
+
+\begin{center}
+\begin{minipage}[c]{9.5cm}
+\begin{semiverbatim}
+\lstset{basicstyle=\tiny}
+\begin{lstlisting}[escapechar=!,linewidth=9.5cm]
+!{\color{foreground}{Deprecated/                            hypo_prcomp.RData}!
+!{\color{foreground}{ReadMe.txt                             islet_int1_final.RData}!
+!{\color{foreground}{adipose_int1_final.RData               islet_int2_final.RData}!
+!{\color{foreground}{adipose_int2_final.RData               islet_mlratio_final.RData}!
+!{\color{foreground}{adipose_mlratio_final.RData            islet_mlratio_nqrank_final.RData}!
+!{\color{foreground}{adipose_mlratio_nqrank_final.RData     islet_prcomp.RData}!
+!{\color{foreground}{adipose_prcomp.RData                   kidney_int1_final.RData}!
+!{\color{foreground}{aligned_geno_with_pmap.RData           kidney_int2_final.RData}!
+!{\color{foreground}{batches_final.RData                    kidney_mlratio_final.RData}!
+!{\color{foreground}{batches_raw_final.RData                kidney_mlratio_nqrank_final.RData}!
+!{\color{foreground}{cpl_final.RData                        kidney_prcomp.RData}!
+!{\color{foreground}{d2o_final.RData                        lipomics_final_rev2.RData}!
+!{\color{foreground}{gastroc_int1_final.RData               liverTG_final.RData}!
+!{\color{foreground}{gastroc_int2_final.RData               liver_int1_final.RData}!
+!{\color{foreground}{gastroc_mlratio_final.RData            liver_int2_final.RData}!
+!{\color{foreground}{gastroc_mlratio_nqrank_final.RData     liver_mlratio_final.RData}!
+!{\color{foreground}{gastroc_prcomp.RData                   liver_mlratio_nqrank_final.RData}!
+!{\color{foreground}{hypo_int1_final.RData                  liver_prcomp.RData}!
+!{\color{foreground}{hypo_int2_final.RData                  mirna_final.RData}!
+!{\color{foreground}{hypo_mlratio_final.RData               necropsy_final_rev2.RData}!
+!{\color{foreground}{hypo_mlratio_final_old.RData           plasmaurine_final_rev.RData}!
+!{\color{foreground}{hypo_mlratio_nqrank_final.RData        pmark.RData}!
+!{\color{foreground}{hypo_mlratio_nqrank_final_old.RData    rbm_final.RData}!
+!{\color{foreground}{hypo_omit.RData}!
+\end{lstlisting}
+\end{semiverbatim}
+\end{minipage}
+\end{center}
+
+
+\end{frame}
+
+
+\begin{frame}<handout:0>[fragile,c]{No ``{\hilit final}'' in file names}
+
+
+\addtocounter{framenumber}{-1}
+
+\begin{center}
+\begin{minipage}[c]{9.5cm}
+\begin{semiverbatim}
+\lstset{basicstyle=\tiny}
+\begin{lstlisting}[escapechar=!,linewidth=9.5cm]
+!{\color{foreground}{Deprecated/                            hypo_prcomp.RData}!
+!{\color{foreground}{ReadMe.txt                             islet_int1_final.RData}!
+!{\color{foreground}{adipose_int1_final.RData               islet_int2_final.RData}!
+!{\color{foreground}{adipose_int2_final.RData               islet_mlratio_final.RData}!
+!{\color{foreground}{adipose_mlratio_final.RData            islet_mlratio_nqrank_final.RData}!
+!{\color{foreground}{adipose_mlratio_nqrank_final.RData     islet_prcomp.RData}!
+!{\color{foreground}{adipose_prcomp.RData                   kidney_int1_final.RData}!
+!{\color{foreground}{aligned_geno_with_pmap.RData           kidney_int2_final.RData}!
+!{\color{foreground}{batches_final.RData                    kidney_mlratio_final.RData}!
+!{\color{foreground}{batches_raw_final.RData                kidney_mlratio_nqrank_final.RData}!
+!{\color{foreground}{cpl_final.RData                        kidney_prcomp.RData}!
+!{\color{foreground}{d2o_final.RData                       }!!{\color{vhilit} lipomics_final_rev2.RData}!
+!{\color{foreground}{gastroc_int1_final.RData               liverTG_final.RData}!
+!{\color{foreground}{gastroc_int2_final.RData               liver_int1_final.RData}!
+!{\color{foreground}{gastroc_mlratio_final.RData            liver_int2_final.RData}!
+!{\color{foreground}{gastroc_mlratio_nqrank_final.RData     liver_mlratio_final.RData}!
+!{\color{foreground}{gastroc_prcomp.RData                   liver_mlratio_nqrank_final.RData}!
+!{\color{foreground}{hypo_int1_final.RData                  liver_prcomp.RData}!
+!{\color{foreground}{hypo_int2_final.RData                  mirna_final.RData}!
+!{\color{foreground}{hypo_mlratio_final.RData              }!!{\color{vhilit} necropsy_final_rev2.RData}!
+!{\color{vhilit}{hypo_mlratio_final_old.RData           plasmaurine_final_rev.RData}!
+!{\color{foreground}{hypo_mlratio_nqrank_final.RData        pmark.RData}!
+!{\color{vhilit}{hypo_mlratio_nqrank_final_old.RData   }!!{\color{foreground} rbm_final.RData}!
+!{\color{foreground}{hypo_omit.RData}!
+\end{lstlisting}
+\end{semiverbatim}
+\end{minipage}
+\end{center}
+
+
+\end{frame}
 
 
 
