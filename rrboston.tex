@@ -11,7 +11,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % title info
-\title{Collaborating reproducibly}
+\title{Reproducible Research}
 \author{\href{https://kbroman.org}{Karl Broman}}
 \institute{Biostatistics \& Medical Informatics \\ Univ.\ Wisconsin{\textendash}Madison}
 \date{\href{https://kbroman.org}{\tt \scriptsize \color{foreground} kbroman.org}
@@ -20,8 +20,8 @@
 \\[-4pt]
 \href{https://twitter.com/kwbroman}{\tt \scriptsize \color{foreground} @kwbroman}
 \\[2pt]
-\scriptsize {\lolit Slides:} \href{https://bit.ly/rrcollab}{\tt \scriptsize
-  \color{foreground} bit.ly/rrcollab}
+\scriptsize {\lolit Slides:} \href{https://bit.ly/rrboston}{\tt \scriptsize
+  \color{foreground} bit.ly/rrboston}
 }
 
 
@@ -35,12 +35,13 @@
 
   \vfill \hfill \includegraphics[height=6mm]{Figs/cc-zero.png} \vspace*{-3mm}
 
-  \note{These are slides for a talk I'm going to give at the AAAS
-    meeting in Washington, DC, on 17 Feb 2019.
+  \note{These are slides for a talk I'm going to give at a
+    reproducible research workshop at Boston University on 14 May
+    2019.
 
-    Source: {\tt https://github.com/kbroman/Talk\_AAAS2019} \\
-    These slides, with notes: {\tt https://bit.ly/rrcollab} \\
-    Full slides without notes: {\tt https://bit.ly/rrcollab\_nonotes}
+    Source: {\tt https://github.com/kbroman/Talk\_RRBoston2019} \\
+    These slides, with notes: {\tt https://bit.ly/rrboston} \\
+    Full slides without notes: {\tt https://bit.ly/rrboston\_nonotes}
 
     By ``reproducibly,'' I'm referring to ``computational
     reproducibility,'' by which I mean that the data and code for a
@@ -523,146 +524,6 @@ Data4Tram/        PepIns_2012-02-09/
 \end{frame}
 
 
-\begin{frame}[c]{Genetics of metabolic disease in mice}
-
-  \begin{columns}
-    \begin{column}{0.50\textwidth}
-
-\vspace*{12pt}
-
-      \footnotesize
-\hspace*{-3mm}
-    Alan Attie, UW-Madison, Biochemistry \\[12pt]
-\hspace*{-3mm}
-    Karl Broman, UW-Madison, Biostat \& Med Info \\[12pt]
-\hspace*{-3mm}
-    Gary Churchill, Jackson Lab\\[12pt]
-\hspace*{-3mm}
-    Josh Coon, UW-Madison, Chemistry \\[12pt]
-\hspace*{-3mm}
-    Federico Rey, UW-Madison, Microbiology \\[12pt]
-\hspace*{-3mm}
-    Brian Yandell, UW-Madison, Statistics
-
-    \end{column}
-
-    \begin{column}{0.45\textwidth}
-
-    \figw{Figs/cc_founders.png}{0.99}
-
-    \end{column}
-  \end{columns}
-
-\note{
-  I want to motivate subsequent discussion with a particular example
-  of a collaboration. There are lots of people involved. A particular
-  challenge is that there are folks from two institutions. But even
-  within UW-Madison, we are in five different departments, with five
-  separate computing systems.
-
-  Our project concerns the genetics of diabetes and obesity, using an
-  advanced intercross among eight strains of mice.
-
-}
-
-
-\end{frame}
-
-
-
-
-\begin{frame}[c]{Diversity outbred mice}
-
-\vspace*{3mm}
-\figw{Figs/hs.pdf}{1.0}
-
-\note{
-  We're using an experimental mouse population called the Diversity
-  Outbreds, which are derived by repeated outcrossing among eight
-  inbred lines. We have data on 500 mice from generations 17--23.
-}
-
-\end{frame}
-
-
-
-\begin{frame}[c]{Data}
-
-
-  \begin{columns}
-    \begin{column}{0.45\textwidth}
-      \bbi
-    \item 500 DO mice
-      \bi
-    \item generations 17--23
-    \item high fat, high sugar diet
-      \ei
-    \item GigaMUGA SNP arrays
-      \bi
-    \item 140k SNPs
-      \ei
-    \item Clinical traits
-      \bi
-    \item Weekly body weight
-    \item Glucose tolerance test
-    \item Longitudinal serum samples
-    \item ex vivo islet insulin secretion
-      \ei
-      \ei
-    \end{column}
-
-    \begin{column}{0.45\textwidth}
-      \bbi
-    \item Islet gene expression by RNA-seq
-    \item Proteins by mass spec
-    \item Lipids by mass spec
-    \item Gut microbiome
-      \bi
-    \item 16S RNA
-    \item metagenomic data
-      \ei
-      \ei
-
-    \end{column}
-  \end{columns}
-
-\note{
-  We have a large and diverse set of data on 500 DO mice who were fed
-  a high fat, high sugar diet. We have high-density SNP data, a
-  variety of clinical traits, gene expression, protein, and lipid
-  measurements, and gut microbiome data.
-
-  Different data sets were generated at different times in different
-  labs, and need separate preprocessing and data cleaning procedures.
-}
-
-\end{frame}
-
-
-\begin{frame}[c]{Genome scans}
-
-
-\only<1|handout 0>{\figw{Figs/attiedo_results_nolegend.pdf}{1.0}}
-
-\only<2>{\figw{Figs/attiedo_results.pdf}{1.0}}
-
-\note{
-  Our basic analysis is to scan the genome for each trait, one at a
-  time, assessing the association between genotype at each position
-  and the trait data. We look for peaks in the test statistic, like
-  that on chromosome 17 in the top panel.
-
-  In the lower panel, we plot all of these inferred QTL
-  (quantitative trait loci, genetic loci that affect
-  quantitative traits) for about 100 or so traits. There are a lot of
-  downstream analyses to look at, but we're particularly interested in
-  diverse traits that are affected by genotype at a common locus.
-}
-
-\end{frame}
-
-
-
 
 
 
@@ -974,7 +835,7 @@ The second-most important tool is {\hilit training}.
 
 \Large
 
-Slides: \href{https://bit.ly/rrcollab}{\tt bit.ly/rrcollab} \quad
+Slides: \href{https://bit.ly/rrboston}{\tt bit.ly/rrboston} \quad
 \includegraphics[height=5mm]{Figs/cc-zero.png}
 
 \vspace{10mm}
