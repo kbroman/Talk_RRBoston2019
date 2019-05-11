@@ -904,26 +904,81 @@ RawData/rawdata.csv: Python/xls2csv.py RawData/rawdata.xls
 
 
 
-
 \begin{frame}[c]{Keeping track of versions}
 
-  google drive/dropbox/box
+\bbi
+  \item Google drive / Dropbox / Box
 
-  version numbers
+  \item Version numbers in file names
 
+  \item Formal version control
+    \bi
+  \item git/GitHub
+    \ei
+
+\ei
 
 
 \end{frame}
 
 
 
+
+\begin{frame}<handout:0>[c]{Version control (git/GitHub)}
+
+\only<1>{\addtocounter{framenumber}{-1}}
+
+\centering
+
+\only<1-2>{\figh{Figs/example_repo}{0.80}}
+\onslide<2>{
+  \vspace{-0.65\textheight}
+  \figh{Figs/example_repo_zoom}{0.55}
+}
+\end{frame}
+
+
+\begin{frame}[c]{Version control (git/GitHub)}
+
+\only<1>{\addtocounter{framenumber}{-1}}
+
+\vspace*{3mm}
+
+\centering
+
+\only<1|handout 0>{\figh{Figs/example_history}{0.80}}
+\only<2>{\figh{Figs/example_commit}{0.80}}
+\only<3|handout 0>{\figh{Figs/example_commit_zoom}{0.80}}
+
+\note{
+  git has a steep learning curve, but ultimately I think you'll find
+  it really helpful.
+
+  The big selling point is in collaboration: merging changes from
+  collaborators, and keep your work synchronized.
+
+  Longer term, there's great value in having the entire history of
+  changes to your project. If something stops working, you can go
+  back to any point in that history to see when it stopped working and
+  why.
+
+  With git, you can also work on new features or analyses without fear
+  of breaking the parts that are currently working well.
+}
+\end{frame}
+
+
+
+
 \begin{frame}[c]{Backups}
 
-  multiple places
+\bbi
+  \item Multiple places
 
-  offsite
+  \item Offsite
 
-  automatic
+  \item Automatic
+\ei
 
 \end{frame}
 
