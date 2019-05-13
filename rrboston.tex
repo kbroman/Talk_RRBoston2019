@@ -719,7 +719,18 @@ geneexpr_mlratio_adipose_v2.rds
 
 
   \note{
-}
+     How you organize your data within files can have a big impact on
+     how easy they are to work with.
+
+     You can probably figure out what the numbers mean here,
+     particularly if I tell you that there were triplicate
+     measurementss under two treatments (1 min or 5 min) of cells that
+     were either normal or mutant and cam from mouse strains B6 or
+     BTBR.
+
+     But it's hard to tell a computer program about the data structure
+     here.
+  }
 \end{frame}
 
 
@@ -730,7 +741,13 @@ geneexpr_mlratio_adipose_v2.rds
 \figh{Figs/good_spreadsheet.pdf}{0.8}
 
   \note{
-}
+     This is the first few rows of a reorganized version of the data,
+     as a rectangle where the rows are individual measurements and the
+     columns are variables.
+
+     This is maybe less pretty, but it's much easier to work with.
+  }
+
 \end{frame}
 
 
@@ -741,6 +758,7 @@ geneexpr_mlratio_adipose_v2.rds
 
   \bbi
 \item Make it a rectangle
+\item Individual measurements as rows; variables as columns
 \item Single header row
 \item One item per cell
 \item No empty cells
@@ -756,7 +774,14 @@ geneexpr_mlratio_adipose_v2.rds
   \hfill doi: 10.1080/00031305.2017.1375989}
 
   \note{
-}
+    Here are some key principles for organizing data in spreadsheets:
+    make a rectangle with a single header row.
+
+    Never do calculations in your raw data file. If you're doing
+    analyses or making charts in Excel, do so in a copy of the data
+    file. Every time you open the raw data file, there's a risk that
+    you'll mess things up.
+  }
 \end{frame}
 
 
