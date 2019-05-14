@@ -1049,7 +1049,23 @@ RawData/rawdata.csv: Python/xls2csv.py RawData/rawdata.xls
   \ei
 
   \note{
-  }
+    Another important step towards reproducibility is to revise your
+    code to make it more clear.
+
+    The single most important step towards clear code is to pull out
+    complex or repeated code as a separate function.
+    This makes your code easier to read and maintain.
+
+    Next, combine those functions together into a package or module.
+    It's surprisingly easy to create an R package (see {\tt
+      https://kbroman.org/pkg\_primer}) and it's even easier to make a
+    Python module.
+
+    When writing functions, try to write them in a somewhat-general
+    way and then pull them out of the project as separate package or
+    module, so that you (and/or others) may reuse them for other
+    purposes.
+}
 
 \end{frame}
 
